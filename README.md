@@ -1,12 +1,14 @@
 # RebustIShip-Agent
 RebustIShip Agent is designed to connect to your local LLM (openai endpoint), and leverage Gemma-4-E4B model within CPU as a repair layer. (Experimental agent)
 
+```bash
 rebustIship/
 ├── .env                 # Fill this in for HF
 ├── agent.py              # Main agent script
 ├── requirements.txt      # Dependencies
 ├── README.md            # Documentation
-├── LICENSE              # MIT License#
+├── LICENSE              # Apache License
+```
 
 # 1. Start your LLM server
 Option A: Ollama (easiest) (port 8000 is what the agent looks for)
