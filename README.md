@@ -66,7 +66,7 @@ python ris_agent.py --apply --run --yes --interactive
 ## Argument	Default	Description
 ```bash
 --base-url	http://127.0.0.1:8000/v1	GPU server URL
---model	huihui-ai/Qwen2.5-Coder-7B-Instruct-abliterated	Main model
+--model	Qwen/Qwen2.5-Coder-7B-Instruct	Main model
 --cpu-model	google/gemma-4-E4B-it	CPU validation model
 --apply	False	Actually execute file writes
 --run	False	Actually execute commands
