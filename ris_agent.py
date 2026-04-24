@@ -435,7 +435,7 @@ Based on the user's instruction, suggest a fixed version. Output ONLY JSON:
             if tool == "write_file" and args.get("path"):
                 path = args["path"]
                 # Try common Python interpreters
-                for python_cmd in ["/opt/rocm-venv/bin/python", "/opt/rocm-venv/bin/python3", "python3", "python"]:
+                for python_cmd in ["python3", "python"]:
                     result = run_command(root, f"{python_cmd} -m py_compile {path}", timeout_s=30)
                     if result["ok"]:
                         print(f"   ✅ Syntax check passed with {python_cmd} for {path}")
@@ -446,7 +446,7 @@ Based on the user's instruction, suggest a fixed version. Output ONLY JSON:
                         print(f"   ❌ Syntax error with {python_cmd}:\n{result['stderr'][:500]}")
                 else:
                     print(f"   ⚠️  Could not find a working Python interpreter.")
-                    print("   Try [C]ustom prompt like: 'use /opt/rocm-venv/bin/python'")
+                    print("   Try [C]ustom prompt like: 'use /path/to/python'")
                 print("\nOptions: [R]etry, [C]ustom, [M]anual, [Cont]inue, [A]bort")
                 continue
             else:
