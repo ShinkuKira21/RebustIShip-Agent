@@ -1,0 +1,10 @@
+# rebustIship Agent - CPU only
+
+# For Gemma model inference on CPU
+torch>=2.0.0  # CPU version works fine
+
+# Hugging Face Transformers
+transformers>=4.30.0
+
+# Environment variables (optional)
+python-dotenv>=1.0.0
